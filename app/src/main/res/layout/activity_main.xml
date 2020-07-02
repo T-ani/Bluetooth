@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@color/silver"
+    tools:context="com.example.bluetoothconnection.MainActivity">
+
+    <Button
+        android:id="@+id/btnONOFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12sp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/black"
+        android:text="ON/OFF"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/btnDiscoverable_ON_OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginRight="59dp"
+        android:background="@color/black"
+        android:onClick="btnEnableDisable_Discoverable"
+        android:text="Enable Discoverable"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/btnFindUnpairedDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnDiscover"
+        android:layout_margin="12sp"
+        android:layout_marginRight="12sp"
+        android:background="@color/black"
+        android:textColor="@color/colorWhite"
+        android:text="Discover" />
+
+    <ListView
+        android:id="@+id/lvnewDevices"
+        android:layout_width="365dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/btnFindUnpairedDevices"
+        android:layout_marginTop="135dp" />
+
+    <Button
+        android:id="@+id/btnStartConnection"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="63dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/black"
+        android:text="Connection"
+        android:textColor="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter text here"
+        android:layout_below="@+id/lvnewDevices"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Send"
+    android:background="@color/black"
+    android:textColor="@color/colorWhite"
+    android:id="@+id/btnSend"
+    android:layout_toRightOf="@+id/editText"
+   android:layout_below="@+id/lvnewDevices"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:text="Incoming Messages"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/incomingMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>
